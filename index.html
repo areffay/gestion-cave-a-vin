@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Cave à Vin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ma Cave à Vin</h1>
+    </header>
+
+    <main>
+        <section id="add-bottle-section">
+            <h2>Ajouter une bouteille</h2>
+            <form id="add-bottle-form">
+                <div class="form-group">
+                    <label for="bottle-name">Nom de la bouteille :</label>
+                    <input type="text" id="bottle-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="bottle-location">Emplacement :</label>
+                    <input type="text" id="bottle-location" placeholder="Ex: Casier A, Étagère 3" required>
+                </div>
+                <div class="form-group">
+                    <label for="bottle-photo">Prendre une photo :</label>
+                    <!-- Pour l'instant, un simple upload. La capture directe viendra plus tard. -->
+                    <input type="file" id="bottle-photo" accept="image/*">
+                </div>
+                <button type="submit">Ajouter à la cave</button>
+            </form>
+        </section>
+
+        <section id="cellar-inventory-section">
+            <h2>Mon Inventaire</h2>
+            <ul id="bottle-list">
+                <!-- Les bouteilles ajoutées apparaîtront ici -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
